@@ -2,33 +2,22 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int is_anagram(char t[], char m[], unsigned int len1, unsigned int len2)
+int is_anagram(char t[], char m[], unsigned int len)
 {
     unsigned int i, j, count = 0;
-    if (len1 == len2)
+    for (i = 0; i < len; i++)
     {
-        for (i = 0; i < len1; i++)
+        for (j = 0; j < len; j++)
         {
-            for (j = 0; j < len2; j++)
+            if (t[i] == m[j])
             {
-                if (t[i] == m[j])
-                {
-                    count++;
-                }
+                count++;
             }
         }
-        if (count == len1)
-        {
-            return 1;
-        }
-        else
-        {
-            return 0;
-        }
     }
-    else
+    if (count == len)
     {
-        return 0;
+        return 1;
     }
     // code
 }
