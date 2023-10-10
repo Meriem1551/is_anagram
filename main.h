@@ -1,0 +1,1 @@
+int is_anagram(char[], char[], int, int);
