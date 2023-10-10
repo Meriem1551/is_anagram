@@ -11,4 +11,5 @@ int main()
     char *c1 = get_string_array("Enter the string as an array", l1);
     char *c2 = get_string_array("Enter the string as an array", l2);
     int res = is_anagram(c1, c2, l1, l2);
+    printf("%d", res);
 }
